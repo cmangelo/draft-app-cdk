@@ -5,23 +5,38 @@
     "draft-app-cdk": "bin/draft-app-cdk.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cdk diff",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "list": "cdk ls",
+    "deploy": "cdk deploy --all",
+    "diff": "cdk diff"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.63.0",
+    "@aws-cdk/assert": "^1.109.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
-    "aws-cdk": "1.63.0",
+    "aws-cdk": "^1.109.0",
     "ts-node": "^8.1.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.63.0",
+    "@aws-cdk/aws-apigateway": "^1.109.0",
+    "@aws-cdk/aws-codebuild": "^1.109.0",
+    "@aws-cdk/aws-codepipeline": "^1.109.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.109.0",
+    "@aws-cdk/aws-cognito": "^1.109.0",
+    "@aws-cdk/aws-ec2": "^1.109.0",
+    "@aws-cdk/aws-ecr": "^1.109.0",
+    "@aws-cdk/aws-ecs-patterns": "^1.109.0",
+    "@aws-cdk/aws-elasticloadbalancingv2": "^1.109.0",
+    "@aws-cdk/aws-iam": "^1.109.0",
+    "@aws-cdk/aws-logs": "^1.109.0",
+    "@aws-cdk/core": "^1.109.0",
+    "aws-cdk": "^1.109.0",
     "source-map-support": "^0.5.16"
   }
 }
